@@ -5,10 +5,12 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="slide-in-left">
-              <div className="w-80 h-80 mx-auto rounded-2xl bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center">
-                <div className="w-60 h-60 rounded-xl bg-gradient-to-br from-primary/20 to-primary/30 flex items-center justify-center">
-                  <span className="text-6xl font-bold text-primary">MK</span>
-                </div>
+              <div className="w-80 h-80 mx-auto rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-primary/20">
+                <img 
+                  src="/lovable-uploads/fecabc97-c067-4734-a067-1e26f709c957.png" 
+                  alt="Manoghn Kandiraju - Data Analytics and Engineering Professional"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
