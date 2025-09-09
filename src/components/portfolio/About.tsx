@@ -28,32 +28,6 @@ const About = () => {
                   real-world projects across anomaly detection, automation, and intelligent systems.
                 </p>
 
-                <div className="mt-8 p-6 rounded-lg bg-muted/50 border border-border">
-                  <h3 className="font-semibold text-foreground mb-4">What I Bring to Different Audiences:</h3>
-                  
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <strong className="text-primary">For Recruiters:</strong>
-                      <span className="text-muted-foreground ml-2">
-                        Download my latest resume or reach out directly via LinkedIn/email.
-                      </span>
-                    </div>
-                    
-                    <div>
-                      <strong className="text-primary">For CXOs & Tech Leaders:</strong>
-                      <span className="text-muted-foreground ml-2">
-                        Data-driven innovation • Scalable AI systems • Cross-functional collaboration.
-                      </span>
-                    </div>
-                    
-                    <div>
-                      <strong className="text-primary">For Students & Aspirants:</strong>
-                      <span className="text-muted-foreground ml-2">
-                        Passionate about mentorship and sharing learnings with aspiring data scientists.
-                      </span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

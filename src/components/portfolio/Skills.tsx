@@ -19,7 +19,7 @@ const Skills = () => {
       id: 'cloud',
       title: 'Cloud & Big Data',
       icon: <Cloud className="w-6 h-6" />,
-      skills: ['AWS', 'Google Cloud', 'Hadoop', 'Snowflake', 'Docker', 'Kubernetes', 'Apache Spark']
+      skills: ['AWS', 'Google Cloud', 'Azure', 'Hadoop', 'Apache Spark']
     },
     {
       id: 'visualization',

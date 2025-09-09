@@ -1,6 +1,13 @@
-import { Mail, Linkedin, Github, Calendar, ArrowUpRight } from 'lucide-react';
+import { Mail, Linkedin, Github, ArrowUpRight, Send } from 'lucide-react';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
   const contactLinks = [
     {
       icon: <Mail className="w-5 h-5" />,
@@ -11,25 +18,32 @@ const Contact = () => {
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/manoghn-kandiraju',
+      href: 'https://www.linkedin.com/in/manoghnkandiraju/',
       description: 'Connect professionally',
       external: true
     },
     {
       icon: <Github className="w-5 h-5" />,
       label: 'GitHub',
-      href: 'https://github.com/manoghn',
+      href: 'https://github.com/ManoghnK',
       description: 'View my code',
-      external: true
-    },
-    {
-      icon: <Calendar className="w-5 h-5" />,
-      label: 'Schedule Call',
-      href: 'https://calendly.com/manoghn',
-      description: 'Book a meeting',
       external: true
     }
   ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = `Message from ${formData.name}`;
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    window.location.href = `mailto:kandiraju.m@northeastern.edu?subject=${encodeURIComponent(subject)}&body=${body}`;
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   return (
     <section id="contact" className="py-20 bg-foreground text-background">
@@ -43,7 +57,8 @@ const Contact = () => {
             Open for collaborations, innovative projects, and data-driven opportunities.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
+            <div className="grid md:grid-cols-3 gap-6">
             {contactLinks.map((link, index) => (
               <a
                 key={link.label}
@@ -67,6 +82,64 @@ const Contact = () => {
                 </div>
               </a>
             ))}
+            </div>
+
+            <div className="fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-background mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-background/10 border border-background/20 rounded-lg text-background placeholder-background/60 focus:outline-none focus:border-background/40 transition-colors"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-background mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-background/10 border border-background/20 rounded-lg text-background placeholder-background/60 focus:outline-none focus:border-background/40 transition-colors"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-background mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={4}
+                    className="w-full px-4 py-3 bg-background/10 border border-background/20 rounded-lg text-background placeholder-background/60 focus:outline-none focus:border-background/40 transition-colors resize-none"
+                    placeholder="Your message..."
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-background/20 hover:bg-background/30 text-background font-medium py-3 px-6 rounded-lg border border-background/30 hover:border-background/50 transition-all inline-flex items-center justify-center gap-2"
+                >
+                  <Send className="w-4 h-4" />
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
 
           <div className="border-t border-background/20 pt-8 fade-in-up" style={{ animationDelay: '0.8s' }}>

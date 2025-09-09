@@ -16,7 +16,7 @@ const Projects = () => {
       title: 'SynthAI',
       description: 'Automated educational content generator using advanced NLP models',
       metrics: '95% lesson coherence, 80% less manual work',
-      githubUrl: 'https://github.com/manoghn/synthai',
+      githubUrl: 'https://github.com/ManoghnK/SynthAI',
       tags: ['NLP', 'Education', 'Automation', 'AI']
     },
     {
@@ -24,24 +24,8 @@ const Projects = () => {
       title: 'Automated Research Paper Critique',
       description: 'Fine-tuned NLP models for academic paper analysis and critique generation',
       metrics: '78% precision on critique classification',
-      githubUrl: 'https://github.com/manoghn/research-critique',
+      githubUrl: 'https://github.com/ManoghnK/Lumina',
       tags: ['NLP', 'Academic', 'Machine Learning', 'Classification']
-    },
-    {
-      id: 'medbud',
-      title: 'Medbud – Mental Health Assistant',
-      description: 'CNN-LSTM based emotion forecasting system for mental health support',
-      metrics: '+25% consistency in emotion prediction',
-      githubUrl: 'https://github.com/manoghn/medbud',
-      tags: ['Healthcare', 'Deep Learning', 'CNN-LSTM', 'Emotion AI']
-    },
-    {
-      id: 'anomaly-detection',
-      title: 'Real-time Anomaly Detection',
-      description: 'System for detecting anomalies in streaming data using ML algorithms',
-      metrics: '92% accuracy in real-time detection',
-      githubUrl: 'https://github.com/manoghn/anomaly-detection',
-      tags: ['Real-time', 'Anomaly Detection', 'Streaming', 'ML']
     }
   ];
 

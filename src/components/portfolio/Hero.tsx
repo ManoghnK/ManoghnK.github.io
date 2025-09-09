@@ -40,7 +40,7 @@ const Hero = () => {
             </a>
             
             <a
-              href="https://github.com/manoghn"
+              href="https://github.com/ManoghnK"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-swiss-outline inline-flex items-center gap-2"
@@ -50,7 +50,7 @@ const Hero = () => {
             </a>
             
             <a
-              href="https://linkedin.com/in/manoghn-kandiraju"
+              href="https://www.linkedin.com/in/manoghnkandiraju/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-swiss-outline inline-flex items-center gap-2"
@@ -65,16 +65,6 @@ const Hero = () => {
             >
               <Mail size={20} />
               Email Me
-            </a>
-            
-            <a
-              href="https://calendly.com/manoghn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-swiss-outline inline-flex items-center gap-2"
-            >
-              <Calendar size={20} />
-              Schedule a Call
             </a>
           </div>
         </div>
