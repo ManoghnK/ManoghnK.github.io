@@ -58,7 +58,7 @@ const Contact = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="space-y-6">
             {contactLinks.map((link, index) => (
               <a
                 key={link.label}
