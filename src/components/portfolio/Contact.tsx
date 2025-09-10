@@ -65,10 +65,10 @@ const Contact = () => {
                 href={link.href}
                 target={link.external ? '_blank' : undefined}
                 rel={link.external ? 'noopener noreferrer' : undefined}
-                className="group p-6 rounded-lg transition-all fade-in-up"
+                className="group block fade-in-up"
                 style={{ animationDelay: `${0.4 + index * 0.1}s` }}
               >
-                <div className="flex flex-col items-center text-center">
+                <div className="flex flex-col items-center text-center p-6 rounded-lg hover:bg-background/5 transition-all">
                   <div className="p-3 bg-background/10 rounded-lg text-background group-hover:bg-background/20 transition-colors mb-3">
                     {link.icon}
                   </div>
